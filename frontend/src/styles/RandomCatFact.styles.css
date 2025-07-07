@@ -1,0 +1,10 @@
+.random-cat-fact {
+    min-width: fit-content;
+    align-items: center;
+}
+
+.random-cat-fact > button {
+    height: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+}

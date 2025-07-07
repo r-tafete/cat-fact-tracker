@@ -1,7 +1,8 @@
 import requests
 import sqlite3
 
-conn = sqlite3.connect("backend/cat_facts.db")
+# connects/creates cat_facts database
+conn = sqlite3.connect("./cat_facts.db")
 cursor = conn.cursor()
 numFactsAdded = 0
 
@@ -13,6 +14,7 @@ cursor.execute('''
     )
 ''')
 
+# fetches and adds 5 unique cat facts into database
 while numFactsAdded < 5:
     response = requests.get("https://catfact.ninja/fact").json()
     fact = response["fact"]
@@ -22,8 +24,8 @@ while numFactsAdded < 5:
         conn.commit()
         print("Added: " + fact)
         numFactsAdded += 1
-    except sqlite3.IntegrityError:
-        print("Skipped: " + fact)
+    except Exception as e:
+        print("Fact not added: " + fact)
         pass
 
 conn.close()

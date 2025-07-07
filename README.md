@@ -2,6 +2,7 @@
 
 ## Directory
 
+```
 cat-fact-tracker/
 ├── backend/
 │   ├── import_cat_facts.py       # Fetches and stores cat facts in db
@@ -10,12 +11,12 @@ cat-fact-tracker/
 ├── frontend/                     # React app (set up via Vite)
 │   └── [React files]
 ├── requirements.txt              # Python dependencies
-
+```
 
 ## Running the app
 To run import_cat_facts:
-- navigate to the \backend subdirectory (cd backend)
-- run
+- navigate to the .\backend subdirectory (cd backend)
+- run the following:
 ```bash
 python import_cat_facts.py
 ```

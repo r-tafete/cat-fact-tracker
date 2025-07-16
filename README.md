@@ -1,6 +1,5 @@
 # Cat Facts
 
-Take-home assignment for Kraemer America.
 Backend: Python, FastAPI, SQLite
 Frontend: React, TypeScript
 
